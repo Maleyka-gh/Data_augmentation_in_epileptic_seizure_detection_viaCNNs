@@ -21,6 +21,7 @@ the detection of epileptic seizures with motor components.
 Therefore, two datasets are created from the original data:
 -  with five features (3D Acceleration in x, y, z direction, heart rate and temperature)
 -  with only three features (only 3D Acceleration)
+
 Standard time series data augmentation techniques and Generative Adversarial Networks
 (GANs) - based augmentation is applied to the seizures available inside the dataset.
 The CNN trained without augmented data is used as a baseline to compare improvements
