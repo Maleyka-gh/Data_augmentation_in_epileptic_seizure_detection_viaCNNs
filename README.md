@@ -1,4 +1,4 @@
-## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature.
+## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature
 
 Epilepsy is a widespread disease characterized by repeated epileptic seizures, which can
 pose a serious risk to the individual’s safety and lead to life-threatening injuries. One approach
@@ -21,3 +21,14 @@ Standard time series data augmentation techniques and Generative Adversarial Net
 (GANs) -based augmentation is applied to the seizures available inside the dataset.
 The CNN trained without augmented data is used as a baseline to compare improvements
 that have been made using the augmented data.
+
+### Dealing with imbalanced dataset
+Handling imbalanced datasets in classification tasks can be difficult because many machine
+learning models are prone to class distribution. There are several ways to address
+this problem, including data level, algorithm level, and hybrid methods. [26] and [28]
+provide in-depth information on the challenges of imbalanced datasets and compare the
+performance of different methods for addressing the class imbalanced, showing promising
+results in improving classification accuracy. The following methods can be followed to deal
+with an imbalanced dataset.
+
+
