@@ -1,3 +1,5 @@
+## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature.
+
 Epilepsy is a widespread disease characterized by repeated epileptic seizures, which can
 pose a serious risk to the individual’s safety and lead to life-threatening injuries. One approach
 to reduce this risk is by using automated seizure detection systems, which can alert
@@ -16,6 +18,6 @@ the detection of epileptic seizures with motor components. Therefore, two datase
 from the original data: one with five features (3D Acceleration in x,y,z direction, heart rate and
 temperature) and the other with only three features (only 3D Acceleration).
 Standard time series data augmentation techniques and Generative Adversarial Networks
-(GANs) -based augmentation is applied to the seizures available inside dataset.
+(GANs) -based augmentation is applied to the seizures available inside the dataset.
 The CNN trained without augmented data is used as a baseline to compare improvements
 that have been made using the augmented data.
