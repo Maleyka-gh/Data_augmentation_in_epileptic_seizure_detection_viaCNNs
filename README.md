@@ -55,7 +55,8 @@ to the original samples, such as :
 - applying warping in time and magnitude (time warping, magnitude warping)
 - rearranging segments (permutation) within the time series,
 - applying rotation matrices(rotation) or
-- slicing (window slicing). 
+- slicing (window slicing).
+  
 In the medical field, using these techniques and their combinations for acceleration data
 has been shown to improve the performance of deep learning algorithms for time series
 classification tasks. Examples of random-transformation-based (standard) time series
