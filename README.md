@@ -1,3 +1,6 @@
+
+in progress....
+
 ## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature
 
 Epilepsy is a widespread disease characterized by repeated epileptic seizures, which can
@@ -22,13 +25,28 @@ Standard time series data augmentation techniques and Generative Adversarial Net
 The CNN trained without augmented data is used as a baseline to compare improvements
 that have been made using the augmented data.
 
-### Dealing with imbalanced dataset
-Handling imbalanced datasets in classification tasks can be difficult because many machine
-learning models are prone to class distribution. There are several ways to address
-this problem, including data level, algorithm level, and hybrid methods. [26] and [28]
-provide in-depth information on the challenges of imbalanced datasets and compare the
-performance of different methods for addressing the class imbalanced, showing promising
-results in improving classification accuracy. The following methods can be followed to deal
-with an imbalanced dataset.
+### Data Augmentation
+Data augmentation is a technique that artificially increases the size of a dataset by creating
+modified versions of existing data. It is particularly helpful in the context of imbalanced
+dataset distributions commonly found in real-world applications. It allows for additional
+data to be generated for underrepresented classes, creating a more balanced dataset. Several
+studies have shown that data augmentation techniques can improve the generalizability
+of deep learning networks, thereby reducing overfitting and enabling the networks to handle
+imbalanced datasets more effectively.
+  Various data augmentation techniques are available, ranging from basic to more advanced
+methods, such as deep generative models. In the context of image data, there are several
+image augmentation methods, mainly including random transformation to improve
+the performance of deep learning models. Like data augmentation techniques used for
+images, many data augmentation techniques for time series are also based on the random
+transformation of the training data. However, due to a diverse amount of time series with
+each having different characteristics, not each technique applies to every dataset.
+  Recent surveys have highlighted the potential of time series augmentation techniques to
+enhance the performance of deep learning models while also improving the quality of the dataset.
+These techniques include basic approaches that involve random transformations in
+the time, frequency, and magnitude domains and advanced approaches that use Generative
+Adversarial Networks (GANs) to generate synthetic time series.
+
+
+
 
 
