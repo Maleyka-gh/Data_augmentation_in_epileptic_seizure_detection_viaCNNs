@@ -62,7 +62,7 @@ classification tasks. Examples of random-transformation-based (standard) time se
 data augmentation techniques are shown in the Figure below. 
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="600"/>
+<img src="plots/aug.PNG" alt="overview" width="500"/>
 </div>
 
 
