@@ -30,12 +30,12 @@ that have been made using the augmented data.
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
 modified versions of existing data. It is particularly helpful in the context of imbalanced
-dataset distributions commonly found in real-world applications. It allows for additional
+dataset distributions commonly found in real-world applications. It allows additional
 data to be generated for underrepresented classes, creating a more balanced dataset.
 Studies have shown that data augmentation techniques can improve the generalizability
 of deep learning networks, thereby reducing overfitting and enabling the networks to handle
 imbalanced datasets more effectively.
-Data augmentation techniques include basic approaches that involve random transformations in
+These techniques include basic approaches that involve random transformations in
 the time, frequency, and magnitude domains and advanced approaches that use Generative
 Adversarial Networks (GANs) to generate synthetic time series.
 
