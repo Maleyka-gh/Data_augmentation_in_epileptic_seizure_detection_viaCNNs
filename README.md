@@ -12,6 +12,7 @@ In this work data augmentation techniques: Standard time series data augmentatio
 (GANs) - based augmentation are utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, two datasets,
 
 *- one with five features (3D acceleration, heart rate, and temperature)* and another
+
 *- with three features(only 3D acceleration)* are used.
 
   
