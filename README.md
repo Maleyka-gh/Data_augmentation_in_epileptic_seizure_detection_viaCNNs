@@ -3,16 +3,10 @@ in progress....
 
 ## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature
 
-Epilepsy is a widespread disease characterized by repeated epileptic seizures, which can
-pose a serious risk to the individual’s safety and lead to life-threatening injuries. One approach
-to reduce this risk is by using automated seizure detection systems, which can alert
-caregivers or medical professionals to the occurrence of a seizure. State-of-the-art seizure
-detection systems, such as those based on Convolutional Neural Networks (CNN), rely on
-large amounts of data to train effectively. However, obtaining real-world seizure data is
-a costly and time-consuming process, and the duration of actual seizure activity during
-extended EEG recordings is typically quite short, often lasting only seconds or minutes.
-As a result, the available dataset for training these systems is often highly imbalanced,
-with far more non-seizure data than seizure data.
+Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
+these risks, one approach is using automated seizure detection systems based on Convolutional Neural Networks
+(CNNs) which rely on large amounts of data to train effectively. However, real-world seizure data
+acquisition is challenging due to the short and infrequent nature of seizures, resulting in a data imbalance.
 
 In this work, data augmentation techniques are utilized to increase the data available for
 the project and train the CNN for seizure
