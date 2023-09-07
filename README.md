@@ -8,8 +8,8 @@ these risks, one approach is using automated seizure detection systems based on 
 (CNNs) which rely on large amounts of data to train effectively. However, real-world seizure data
 acquisition is challenging due to the short and infrequent nature of seizures, resulting in a data imbalance.
 
-In this work data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
-(GANs) - based augmentation are utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, two datasets,
+In this work, data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
+(GANs) - based augmentation is utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, two datasets,
 
 *- one with five features (3D acceleration, heart rate, and temperature)* and another
 
