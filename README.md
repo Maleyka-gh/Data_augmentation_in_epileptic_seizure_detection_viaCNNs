@@ -31,7 +31,7 @@ These techniques include basic approaches that involve random transformations in
 the time, frequency, and magnitude domains and advanced approaches that use Generative
 Adversarial Networks (GANs) to generate synthetic time series.
 
-### Short theoretical background of Standard Augmentation techniques
+### Standard Augmentation techniques
 
 While the choice of data augmentation techniques depends on the
 dataset’s properties and the task at hand, several basic techniques have been identified in
