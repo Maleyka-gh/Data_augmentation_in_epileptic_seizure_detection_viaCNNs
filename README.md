@@ -8,18 +8,15 @@ these risks, one approach is using automated seizure detection systems based on 
 (CNNs) which rely on large amounts of data to train effectively. However, real-world seizure data
 acquisition is challenging due to the short and infrequent nature of seizures, resulting in a data imbalance.
 
-In this work, data augmentation techniques are utilized to increase the data available for
-the project and train the CNN for seizure
-detection, with more available data to achieve high sensitivity and a low false alarm rate in
-the detection of epileptic seizures with motor components.
-Therefore, two datasets are created from the original data:
--  with five features (3D Acceleration in x, y, z direction, heart rate and temperature)
--  with only three features (only 3D Acceleration in x, y, z direction)
+In this work data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
+(GANs) - based augmentation are utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, two datasets,
 
-Standard time series data augmentation techniques and Generative Adversarial Networks
-(GANs) - based augmentation is applied to the seizures available inside the dataset.
-The CNN trained without augmented data is used as a baseline to compare improvements
-that have been made using the augmented data.
+*- one with five features (3D acceleration, heart rate, and temperature)* and another
+*- with three features(only 3D acceleration)* are used.
+
+  
+ For results comparison, CNN trained without augmented data is used
+ as a baseline.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
