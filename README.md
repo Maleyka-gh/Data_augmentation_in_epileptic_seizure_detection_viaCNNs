@@ -35,12 +35,7 @@ data to be generated for underrepresented classes, creating a more balanced data
 Studies have shown that data augmentation techniques can improve the generalizability
 of deep learning networks, thereby reducing overfitting and enabling the networks to handle
 imbalanced datasets more effectively.
-  Various data augmentation techniques are available, ranging from basic to more advanced
-methods, such as deep generative models. Like data augmentation techniques used for
-images, many data augmentation techniques for time series are also based on the random
-transformation of the training data. However, due to a diverse amount of time series with
-each having different characteristics, not each technique applies to every dataset.
-The augmentation techniques include basic approaches that involve random transformations in
+Data augmentation techniques include basic approaches that involve random transformations in
 the time, frequency, and magnitude domains and advanced approaches that use Generative
 Adversarial Networks (GANs) to generate synthetic time series.
 
@@ -55,10 +50,7 @@ to the original samples, such as :
 *- rearranging segments (permutation) within the time series*
 *- applying rotation matrices(rotation)* or
 *- slicing (window slicing).*
-  
-In the medical field, using these techniques and their combinations for acceleration data
-has been shown to improve the performance of deep learning algorithms for time series
-classification tasks. Examples of random-transformation-based (standard) time series
+Examples of random-transformation-based (standard) time series
 data augmentation techniques are shown in the Figure below. 
 
 <div align="center">
