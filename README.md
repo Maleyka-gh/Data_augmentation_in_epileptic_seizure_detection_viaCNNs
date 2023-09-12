@@ -2,7 +2,7 @@
 ## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
 
-*Note: Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.*
+*Note: Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included all the code files. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)** for a general overview.*
 
 
 ***General pipeline* - Method & Implementation**
