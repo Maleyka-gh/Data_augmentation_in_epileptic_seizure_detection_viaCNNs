@@ -18,8 +18,8 @@ In this work, data augmentation techniques: Standard time series data augmentati
   
  For results comparison, CNN trained without augmented data is used
  as a baseline. 
- Since the master's thesis includes extensive research and implementation, it is not convenient to include everything here.
- Code file for Augmentation via GANs are included, however the results and implementation is not explained in here. For an overview see the presentation 
+ 
+Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered in this text. For a general overview, please refer to the presentation.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
