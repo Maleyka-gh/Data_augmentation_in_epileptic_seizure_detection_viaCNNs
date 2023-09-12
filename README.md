@@ -4,7 +4,7 @@
 ***General pipeline* - Method & Implementation**
 
 <div align="center">
-<img src="plots/implementation.png" alt="overview" width="700"/>
+<img src="plots/implementation.png" alt="overview" width="800"/>
 </div>
 
 
