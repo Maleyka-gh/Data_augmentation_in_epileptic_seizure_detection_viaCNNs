@@ -44,7 +44,7 @@ to the original samples, such as :
 
 *- rearranging segments (permutation) within the time series*
 
-*- applying rotation matrices(rotation)* or
+*- applying rotation matrices (rotation)* or
 
 *- slicing (window slicing).*
 
@@ -54,6 +54,9 @@ data augmentation techniques are shown in the Figure below.
 <div align="center">
 <img src="plots/aug.PNG" alt="overview" width="500"/>
 </div>
+
+For augmented sample plots via each technique is available under the [Notebook](aug_plots.ipynb) 
+
 
 
 
