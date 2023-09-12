@@ -221,7 +221,12 @@ lowest false alarm rate among all other techniques at
 the same seizure sensitivity as the baseline. On the
 other hand, Rotation (R) achieves the best result with
 higher seizure sensitivity at a lower false alarm rate
-than the baseline. Using 4x and 8x proportions lead
+than the baseline. Using 4x and 8x proportions lead to a lower false alarm rate than baseline with a higher
+or the same seizure sensitivity as baseline (except PT
+with high FA/24h). Using 1x proportion results in
+lower seizure sensitivity at low FA/24h (Jittering (J))
+or higher seizure sensitivity at high FA/24h (W and
+T).
 
 
 
