@@ -18,7 +18,7 @@ In this work, data augmentation techniques: Standard time series data augmentati
  For results comparison, CNN trained without augmented data is used
  as a baseline. 
  
-Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.
+Note: *Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.*
 
 
 ***General pipeline* - Method & Implementation**
