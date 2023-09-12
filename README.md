@@ -1,11 +1,17 @@
 
 ## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
+
+*Note: Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.*
+
+
 ***General pipeline* - Method & Implementation**
 
 <div align="center">
-<img src="plots/implementation.PNG" alt="overview" width="500"/>
+<img src="plots/implementation.png" alt="overview" width="800"/>
 </div>
+
+
 
 
 
@@ -26,7 +32,6 @@ In this work, data augmentation techniques: Standard time series data augmentati
  For results comparison, CNN trained without augmented data is used
  as a baseline. 
  
-Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
