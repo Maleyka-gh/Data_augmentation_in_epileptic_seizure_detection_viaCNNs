@@ -1,6 +1,4 @@
 
-in progress....
-
 ## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
 Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
@@ -11,15 +9,15 @@ acquisition is challenging due to the short and infrequent nature of seizures, r
 In this work, data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
 (GANs) - based augmentation is utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, the wearable sensor dataset is prepared into two datasets,
 
-*- one with **five features (3D acceleration, heart rate, and temperature)*** and another
+*-  **five features (3D acceleration, heart rate, and temperature)*** 
 
-*- with **three features(only 3D acceleration)*** are used.
+*-  **three features(only 3D acceleration)*** are used.
 
   
  For results comparison, CNN trained without augmented data is used
  as a baseline. 
  
-Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. For a general overview, please refer to the **[presentation](defense_masterthesis.pptx).**.
+Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
@@ -69,7 +67,7 @@ transformation in the augmentation process. In contrast to the 15% interpolation
 used in the original data, the interpolation threshold is kept as low as 10% to preserve
 more real data points of the augmented sample.
 
-### Jittering
+#### Jittering
 Noise is generated from a normal distribution with a mean of 0 and chosen standard deviation values of 0.2 and 0.5 to examine the effect of low and high noise levels on the performance of the
 models. Choosing the right standard deviation ensures the jittered data reflects the original time series. A standard deviation that is too large may distort the data, while too small may not add enough diversity.
 
@@ -81,7 +79,7 @@ models. Choosing the right standard deviation ensures the jittered data reflects
 <img src="plots/jitter _hr_temp.png" alt="overview" width="600"/>
 </div>
 
-### Rotation
+#### Rotation
 Rotation is one of the augmentation techniques that can be applied only to acceleration
 data in this work due to the label-invariant characteristics of different wearable sensor
 placements among participants. For example, a reversed placement of the sensor can flip its readings while maintaining the same labels for the acceleration data. In this case, rotational
@@ -91,7 +89,7 @@ inverting their sign can result in changes to the label, generating unrealistic 
 <img src="plots/rotation.png" alt="overview" width="600"/>
 </div>
 
-### Permutation
+#### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
 time series by dividing it into a specified number of segments and rearranging the order of
 the segments randomly. The number of segments N and the minimum segment length are both defined hyperparameters.
@@ -102,7 +100,7 @@ length is fixed at 10.
 <img src="plots/permutation.png" alt="overview" width="600"/>
 </div>
 
-### Time Warping
+#### Time Warping
 The time warping is applied to the original time series sample by smoothly distorting the
 time steps. First, the smooth cubic spline is generated using the knots with a mean of 0 and
 a standard deviation of 0.2. The cumulative graph is formed using the cumulative sum
@@ -114,7 +112,7 @@ acceleration data to generate the time-warped version of the data.
 <img src="plots/time_warp.png" alt="overview" width="600"/>
 </div>
 
-### Magnitude Warping 
+#### Magnitude Warping 
 Magnitude warping involves modifying the magnitude or amplitude of the original signal
 by convolving it with smooth warping curves. These warping curves are generated using
 a cubic spline interpolation method and their shape is determined by a set of randomly
@@ -135,7 +133,7 @@ rate and temperature, Magnitude Warping is not applied to these features. (same 
 <img src="plots/mag_warp.png" alt="overview" width="600"/>
 </div>
 
-### Window Slicing
+#### Window Slicing
 Window slicing is an augmentation technique in time series analysis that selects a portion of the data as a representative window. In this approach, the data is cropped to 90% of its original length, with the starting point chosen randomly and 10% removed from either end. For direct comparison with other methods, the cropped series is interpolated back to its original length.
 
 <div align="center">
@@ -150,7 +148,7 @@ of 3D acceleration time series presented in a single plot.
 </div>
 
 
-### Combination of techniques 
+#### Combination of techniques 
 
 • Permutation + Time Warping
 
@@ -169,6 +167,33 @@ to the y-axis of 3D acceleration time series presented in a single plot.
 
 
 ### Results
+
+Experiments are conducted by training a Convolutional Neural Network (CNN) with augmented data
+in various proportions. The evaluation metrics are obtained for both five-feature and three-feature datasets.
+For comparison, baseline results are derived by training the CNN without any augmented data.
+First, to determine the best-performing augmented
+data setting ( data proportions and hyperparameter
+setting ) for each augmentation technique, the experiments that result in a higher seizure sensitivity than
+the baseline with a lower false alarm than the baseline is selected. Moreover, if a technique can only
+achieve the same level of seizure sensitivity as the
+baseline while reducing the false alarm rate (less than
+the baseline), it is considered the best case for that
+technique. If, for a technique, there are multiple best
+cases, the experiment with the highest seizure sensitivity and lowest false alarm rate is chosen as the best
+case. Moreover, the best-case performance is also
+presented for the techniques that did not show any
+improvement to the baseline. The table summarizes the
+best-case results of CNN model performance trained
+with augmented data from different standard augmentation techniques on the five-feature scenario. The table presents the seizure and window sensitivity, false
+alarm rate per 24 hours, and specificity values for the
+best cases. The proportion of augmented data used
+during the training is also shown. Additionally, the ”Base” column provides the baseline (without data
+augmentation) results for comparison.
+
+<div align="center">
+<img src="plots/result_table.PNG" alt="overview" width="600"/>
+</div>
+
 
 *Comparison based on seizure sensitivity and FA/24h of standard augmentation techniques
 in **five-feature** dataset*
@@ -209,7 +234,6 @@ sensitivity and false alarm rate per 24 hours for various techniques in the thre
 </div>
 
 
-
 T, PT,
 W, P, RP, RT and R achieve a higher seizure sensitivity than the baseline. However, the false alarm rate is
 very high (greater than the baseline) for W, PT, and T,
@@ -230,6 +254,55 @@ lower seizure sensitivity at low FA/24h (Jittering (J))
 or higher seizure sensitivity at high FA/24h (W and
 T).
 
+### Discussion
+
+All standard time series data augmentation techniques (except T) have a higher seizure sensitivity
+in the five-feature case as compared to when they
+are used in the three-feature case. However, considering the detection improvement from their baseline version, no technique in the five-feature case
+has produced more seizure sensitivity than its baseline (90%). In contrast, all the techniques (except
+J, M, and RPT) in the three-feature case have given
+higher seizure sensitivity than its baseline (80%). Using Time-Warping in a three-feature case, a seizure
+sensitivity of 95% is achieved, which is overall the
+highest among all the techniques in both three-feature
+and five-feature cases. 
+
+Using standard augmentation techniques, the average false alarm rate for the five-feature case is approximately 304 FA/24h. This is notably lower than the average false alarm rate of 377 FA/24h observed
+in the three-feature case. Since the lower false alarm
+means that more non-seizure windows are classified
+accurately, it is observed that, as a result, the average
+specificity with all techniques in the five-feature case
+is 87%, which is higher than the average specificity of
+80% observed in three-feature scenarios. The window
+sensitivity for all the techniques in the five-feature
+case, averaging 68.6%, is also higher than those of
+the three-feature case, which has an average window
+sensitivity of 57.3%.
+Training with augmented data increases the quantity of seizure data in the training set. As classes are
+balanced before training, this also leads to a corresponding increase in the number of non-seizure samples in the training set. The false alarm rate is reduced with most augmentation techniques because
+the model has been exposed to more non-seizure samples during training, enabling it to more accurately
+predict non-seizure samples in the test set. Considering this, if more original seizure data is available, training the model with a combination of original and synthetic data would be more beneficial in
+lowering the false alarm rates without decreasing the
+sensitivity.
+
+### Summary 
+Most standard time series data augmentation techniques lowered the false alarm rate in both the three-
+and five-feature dataset cases. The seizure sensitivity remained constant in the five-feature case, while it
+showed improvement in the three-feature case when
+compared to the CNN result that did not use any augmented data.
+In the five-feature dataset, the most effective
+augmentation approach was achieved by utilizing a
+combination of Rotation and Permutation techniques
+(RP), whereas in the three-feature dataset, the best results were obtained by employing Rotation (R) and
+Magnitude Warping (M) techniques. In the five-feature case, the combination of Rotation and Permutation (RP) achieves the same seizure sensitivity as
+the baseline (90%) while reducing the false alarm rate
+by 123 FA/24h. In the three-feature case, Rotation
+(R) increases the seizure sensitivity by 5% (from 80%
+to 85%) while reducing the false alarm rate by 160
+FA/24h (from 453FA/24h to 293FA/24h). The aforementioned results were observed when the synthetic
+data obtained from the most effective techniques (4x:
+with an amount four times larger than the original
+data) was combined with the original dataset, which
+was used for CNN training.
 
 
 
