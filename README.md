@@ -72,11 +72,11 @@ Noise is generated from a normal distribution with a mean of 0 and chosen standa
 models. Choosing the right standard deviation ensures the jittered data reflects the original time series. A standard deviation that is too large may distort the data, while too small may not add enough diversity.
 
 <div align="center">
-<img src="plots/jitter _hr_temp.png" alt="overview" width="500"/>
+<img src="plots/jitter.png" alt="overview" width="600"/>
 </div>
 
 <div align="center">
-<img src="plots/jitter.png" alt="overview" width="500"/>
+<img src="plots/jitter _hr_temp.png" alt="overview" width="600"/>
 </div>
 
 ### Rotation
@@ -86,12 +86,12 @@ placements among participants. For example, a reversed placement of the sensor c
 augmentation can be employed as a way of simulating various sensor placements. However, this approach is not suitable for heart rate and temperature data because
 inverting their sign can result in changes to the label, generating unrealistic data.
 <div align="center">
-<img src="plots/rotation.png" alt="overview" width="500"/>
+<img src="plots/rotation.png" alt="overview" width="600"/>
 </div>
 
 
 <div align="center">
-<img src="plots/rotation_xyz.png" alt="overview" width="500"/>
+<img src="plots/rotation_xyz.png" alt="overview" width="600"/>
 </div>
 ### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
@@ -101,7 +101,7 @@ In this work, N is tested at values of 2, 3, and 5, while the minimum segment
 length is fixed at 10.
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/permutation.png" alt="overview" width="600"/>
 </div>
 
 ### Time Warping
@@ -113,7 +113,7 @@ cumulative time stamps are then used to perform linear interpolation on the orig
 acceleration data to generate the time-warped version of the data.
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/time_warp.png" alt="overview" width="600"/>
 </div>
 
 ### Magnitude Warping 
@@ -125,14 +125,14 @@ they are generated from a random normal distribution with a mean of 1 and a stan
 deviation of 0.2.
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/mag_warp.png" alt="overview" width="600"/>
 </div>
 
 ### Window Slicing
 Window slicing is an augmentation technique in time series analysis that selects a portion of the data as a representative window. In this approach, the data is cropped to 90% of its original length, with the starting point chosen randomly and 10% removed from either end. For direct comparison with other methods, the cropped series is interpolated back to its original length.
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/win_slice" alt="overview" width="600"/>
 </div>
 
 
