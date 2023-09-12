@@ -11,13 +11,15 @@ acquisition is challenging due to the short and infrequent nature of seizures, r
 In this work, data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
 (GANs) - based augmentation is utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, the wearable sensor dataset is prepared into two datasets,
 
-*- one with five features (3D acceleration, heart rate, and temperature)* and another
+*- one with **five features (3D acceleration, heart rate, and temperature)*** and another
 
-*- with three features(only 3D acceleration)* are used.
+*- with **three features(only 3D acceleration)*** are used.
 
   
  For results comparison, CNN trained without augmented data is used
- as a baseline.
+ as a baseline. 
+ Since the master's thesis includes extensive research and implementation, it is not convenient to include everything here.
+ Code file for Augmentation via GANs are included, however the results and implementation is not explained in here. For an overview see the presentation 
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
