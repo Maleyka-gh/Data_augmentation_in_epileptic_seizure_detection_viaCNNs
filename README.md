@@ -11,13 +11,15 @@ acquisition is challenging due to the short and infrequent nature of seizures, r
 In this work, data augmentation techniques: Standard time series data augmentation techniques and Generative Adversarial Networks
 (GANs) - based augmentation is utilized to increase the training dataset for CNNs, aiming for high sensitivity and low false alarm rates in the detection of epileptic seizures. For this purpose, the wearable sensor dataset is prepared into two datasets,
 
-*- one with five features (3D acceleration, heart rate, and temperature)* and another
+*- one with **five features (3D acceleration, heart rate, and temperature)*** and another
 
-*- with three features(only 3D acceleration)* are used.
+*- with **three features(only 3D acceleration)*** are used.
 
   
  For results comparison, CNN trained without augmented data is used
- as a baseline.
+ as a baseline. 
+ 
+Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. For a general overview, please refer to the **[presentation](defense_masterthesis.pptx).**.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
@@ -120,6 +122,15 @@ generated knots and the shape of input data. In this work, the number of knots i
 they are generated from a random normal distribution with a mean of 1 and a standard
 deviation of 0.2.
 
+Since the sampling frequency 3D acceleration data is different from heart rate and temperature
+data, applying Magnitude Warping will require resampling of heart rate and
+temperature data. Resampling the heart rate and temperature data to the same frequency
+as the acceleration data and applying magnitude warping to all five features can result
+in unrealistic values for heart rate and temperature. Furthermore, Magnitude Warping applied to the resampled data could result in further distortions. After resampling the
+heart rate and temperature back to their original frequency for CNN training, the accuracy of the data could
+be even further impacted. Since this operation might not result in reliable data for heart
+rate and temperature, Magnitude Warping is not applied to these features. (same applies for Time Warping and Window Slicing)
+
 <div align="center">
 <img src="plots/mag_warp.png" alt="overview" width="600"/>
 </div>
@@ -155,6 +166,73 @@ to the y-axis of 3D acceleration time series presented in a single plot.
 <div align="center">
 <img src="plots/comb_tech_all.png" alt="overview" width="600"/>
 </div>
+
+
+### Results
+
+*Comparison based on seizure sensitivity and FA/24h of standard augmentation techniques
+in **five-feature** dataset*
+
+The figure represents the relationship between
+seizure sensitivity and false alarm rate FA/24h for various techniques in the five-feature scenario. Seizure
+sensitivity is represented on the x-axis, while FA/24h
+is shown on the y-axis. Each dot represents a technique and the color corresponds to the technique’s label. The plot compares the different
+techniques based on sensitivity and false alarm rate.
+
+<div align="center">
+<img src="plots/std_aug_5feat.png" alt="overview" width="600"/>
+</div>
+
+
+It can be seen that W, T, R, PT, RT, P, and RP achieve
+the same high seizure sensitivity as the baseline with
+a lower false alarm rate than the baseline. J, M, and RPT yield lower FA/24h at the expense of low (less than baseline) seizure sensitivity. The black arrow on
+the plot points to the Rotation and Permutation (RP)
+combination, which shows the best performance by
+achieving the lowest false alarm rate (259 FA/24h) at
+a high seizure sensitivity of 0.9. Using 1x and 4x proportions yields the same baseline seizure sensitivity
+at lower FA/24h (except Magnitude Warping, (M)).
+Using 2x proportion of augmented data from W, T,
+PT and RT result in high (same as baseline) seizure
+sensitivity. This proportion yields a low (lower than
+baseline) seizure sensitivity in RPT and J techniques.
+However, the false alarm rate is lower than the baseline with all the augmentation techniques. The 4x proportion leads to a lower false alarm rate than others.
+
+*Comparison based on seizure sensitivity and FA/24h of standard augmentation techniques
+in **three-feature** dataset*
+
+The figure displays the relationship between seizure
+sensitivity and false alarm rate per 24 hours for various techniques in the three-feature scenario.
+
+<div align="center">
+<img src="plots/std_aug_3feat.png" alt="overview" width="600"/>
+</div>
+
+
+
+T, PT,
+W, P, RP, RT and R achieve a higher seizure sensitivity than the baseline. However, the false alarm rate is
+very high (greater than the baseline) for W, PT, and T,
+while it is lower (less than the baseline) for P, RP, RT
+and R. Using RPT and M augmentation techniques
+yields the same seizure sensitivity as the baseline at
+lower false alarm rate (less than the baseline). Moreover, Jittering (J) yields a significantly low seizure
+sensitivity at a lower false alarm rate. Time Warping (T) gives the highest seizure sensitivity of 0.95
+with a relatively increased false alarm rate. Magnitude warping (M) performs the best in terms of the
+lowest false alarm rate among all other techniques at
+the same seizure sensitivity as the baseline. On the
+other hand, Rotation (R) achieves the best result with
+higher seizure sensitivity at a lower false alarm rate
+than the baseline. Using 4x and 8x proportions lead to a lower false alarm rate than baseline with a higher
+or the same seizure sensitivity as baseline (except PT
+with high FA/24h). Using 1x proportion results in
+lower seizure sensitivity at low FA/24h (Jittering (J))
+or higher seizure sensitivity at high FA/24h (W and
+T).
+
+
+
+
 
 
 
