@@ -72,7 +72,11 @@ Noise is generated from a normal distribution with a mean of 0 and chosen standa
 models. Choosing the right standard deviation ensures the jittered data reflects the original time series. A standard deviation that is too large may distort the data, while too small may not add enough diversity.
 
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/jitter _hr_temp.png" alt="overview" width="500"/>
+</div>
+
+<div align="center">
+<img src="plots/jitter.png" alt="overview" width="500"/>
 </div>
 
 ### Rotation
@@ -82,9 +86,13 @@ placements among participants. For example, a reversed placement of the sensor c
 augmentation can be employed as a way of simulating various sensor placements. However, this approach is not suitable for heart rate and temperature data because
 inverting their sign can result in changes to the label, generating unrealistic data.
 <div align="center">
-<img src="plots/aug.PNG" alt="overview" width="500"/>
+<img src="plots/rotation.png" alt="overview" width="500"/>
 </div>
 
+
+<div align="center">
+<img src="plots/rotation_xyz.png" alt="overview" width="500"/>
+</div>
 ### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
 time series by dividing it into a specified number of segments and rearranging the order of
