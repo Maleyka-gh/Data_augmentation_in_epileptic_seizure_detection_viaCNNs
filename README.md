@@ -1,14 +1,6 @@
 
 ## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
-***General pipeline* - Method & Implementation**
-
-<div align="center">
-<img src="plots/implementation.png" alt="overview" width="800"/>
-</div>
-
-
-
 
 Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
 these risks, one approach is using automated seizure detection systems based on Convolutional Neural Networks
@@ -27,6 +19,15 @@ In this work, data augmentation techniques: Standard time series data augmentati
  as a baseline. 
  
 Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx)**. for a general overview.
+
+
+***General pipeline* - Method & Implementation**
+
+<div align="center">
+<img src="plots/implementation.png" alt="overview" width="800"/>
+</div>
+
+
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
