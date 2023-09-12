@@ -131,8 +131,8 @@ Window slicing is an augmentation technique in time series analysis that selects
 <img src="plots/win_slice.png" alt="overview" width="600"/>
 </div>
 
-**Examples of standard time series data augmentation techniques applied to the y-axis
-of 3D acceleration time series presented in a single plot.**
+Examples of standard time series data augmentation techniques applied to the y-axis
+of 3D acceleration time series presented in a single plot.
 
 <div align="center">
 <img src="plots/stan_tech_all.png" alt="overview" width="600"/>
@@ -141,15 +141,16 @@ of 3D acceleration time series presented in a single plot.**
 
 ### Combination of techniques 
 
-**• Permutation + Time Warping**
-
-**• Rotation + Permutation**
+• Permutation + Time Warping
 
 
-**• Rotation + Time Warping**
+• Rotation + Permutation
 
-**Examples of a combination of standard time series data augmentation techniques applied
-to the y-axis of 3D acceleration time series presented ina single plot.**
+
+• Rotation + Time Warping
+
+Examples of a combination of standard time series data augmentation techniques applied
+to the y-axis of 3D acceleration time series presented in a single plot.
 
 <div align="center">
 <img src="plots/comb_tech_all.png" alt="overview" width="600"/>
