@@ -19,7 +19,7 @@ In this work, data augmentation techniques: Standard time series data augmentati
  For results comparison, CNN trained without augmented data is used
  as a baseline. 
  
-Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. For a general overview, please refer to the **[presentation](defense_masterthesis.pptx).**.
+Since my master's thesis involves extensive research and implementation, it's not feasible to include all the details here. I've included the code files for Augmentation via GANs. However, the detailed results and implementation are not covered here. Please refer to the **[presentation](defense_masterthesis.pptx).** for a general overview.
 
 ### Data Augmentation
 Data augmentation is a technique that artificially increases the size of a dataset by creating
@@ -169,6 +169,33 @@ to the y-axis of 3D acceleration time series presented in a single plot.
 
 
 ### Results
+
+Experiments are conducted by training a Convolutional Neural Network (CNN) with augmented data
+in various proportions. The evaluation metrics are obtained for both five-feature and three-feature datasets.
+For comparison, baseline results are derived by training the CNN without any augmented data.
+First, to determine the best-performing augmented
+data setting ( data proportions and hyperparameter
+setting ) for each augmentation technique, the experiments that result in a higher seizure sensitivity than
+the baseline with a lower false alarm than the baseline is selected. Moreover, if a technique can only
+achieve the same level of seizure sensitivity as the
+baseline while reducing the false alarm rate (less than
+the baseline), it is considered the best case for that
+technique. If, for a technique, there are multiple best
+cases, the experiment with the highest seizure sensitivity and lowest false alarm rate is chosen as the best
+case. Moreover, the best-case performance is also
+presented for the techniques that did not show any
+improvement to the baseline. The table summarizes the
+best-case results of CNN model performance trained
+with augmented data from different standard augmentation techniques on the five-feature scenario. The table presents the seizure and window sensitivity, false
+alarm rate per 24 hours, and specificity values for the
+best cases. The proportion of augmented data used
+during the training is also shown. Additionally, the ”Base” column provides the baseline (without data
+augmentation) results for comparison.
+
+<div align="center">
+<img src="plots/result_table.png" alt="overview" width="600"/>
+</div>
+
 
 *Comparison based on seizure sensitivity and FA/24h of standard augmentation techniques
 in **five-feature** dataset*
