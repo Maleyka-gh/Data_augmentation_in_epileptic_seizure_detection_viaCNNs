@@ -1,7 +1,7 @@
 
 in progress....
 
-## Data Augmentation in Epileptic Seizure Detection based on 3 Acceleration, Heart Rate and Temperature
+## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
 Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
 these risks, one approach is using automated seizure detection systems based on Convolutional Neural Networks
