@@ -89,11 +89,6 @@ inverting their sign can result in changes to the label, generating unrealistic 
 <img src="plots/rotation.png" alt="overview" width="600"/>
 </div>
 
-
-<div align="center">
-<img src="plots/rotation_xyz.png" alt="overview" width="600"/>
-</div>
-
 ### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
 time series by dividing it into a specified number of segments and rearranging the order of
@@ -133,7 +128,27 @@ deviation of 0.2.
 Window slicing is an augmentation technique in time series analysis that selects a portion of the data as a representative window. In this approach, the data is cropped to 90% of its original length, with the starting point chosen randomly and 10% removed from either end. For direct comparison with other methods, the cropped series is interpolated back to its original length.
 
 <div align="center">
-<img src="plots/win_slice" alt="overview" width="600"/>
+<img src="plots/win_slice.png" alt="overview" width="600"/>
+</div>
+
+**Examples of standard time series data augmentation techniques applied to the y-axis
+of 3D acceleration time series presented in a single plot.**
+
+<div align="center">
+<img src="plots/stan_tech_all.png" alt="overview" width="600"/>
+</div>
+
+
+### Combination of techniques 
+**• Permutation + Time Warping**
+**• Rotation + Permutation**
+**• Rotation + Time Warping**
+
+**Examples of a combination of standard time series data augmentation techniques applied
+to the y-axis of 3D acceleration time series presented ina single plot.**
+
+<div align="center">
+<img src="plots/comb_tech_all.png" alt="overview" width="600"/>
 </div>
 
 
