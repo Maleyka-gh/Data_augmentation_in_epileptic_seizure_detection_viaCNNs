@@ -140,9 +140,11 @@ of 3D acceleration time series presented in a single plot.**
 
 
 ### Combination of techniques 
+
 **• Permutation + Time Warping**
 
 **• Rotation + Permutation**
+
 
 **• Rotation + Time Warping**
 
