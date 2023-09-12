@@ -13,6 +13,9 @@
 
 
 
+
+
+
 Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
 these risks, one approach is using automated seizure detection systems based on Convolutional Neural Networks
 (CNNs) which rely on large amounts of data to train effectively. However, real-world seizure data
