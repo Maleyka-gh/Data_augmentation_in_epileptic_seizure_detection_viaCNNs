@@ -74,8 +74,7 @@ models. Choosing the right standard deviation ensures the jittered data reflects
 Rotation is one of the augmentation techniques that can be applied only to acceleration
 data in this work due to the label-invariant characteristics of different wearable sensor
 placements among participants. For example, a reversed placement of the sensor can flip its readings while maintaining the same labels for the acceleration data. In this case, rotational
-augmentation can be employed as a way of simulating various sensor placements
-[21]. However, this approach is not suitable for heart rate and temperature data because
+augmentation can be employed as a way of simulating various sensor placements. However, this approach is not suitable for heart rate and temperature data because
 inverting their sign can result in changes to the label, generating unrealistic data.
 ### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
