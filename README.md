@@ -1,6 +1,4 @@
 
-in progress....
-
 ## Data Augmentation in Epileptic Seizure Detection based on 3D Acceleration, Heart Rate and Temperature
 
 Epilepsy, characterized by recurrent seizures, poses a significant risk to the individual’s safety. To mitigate
@@ -69,7 +67,7 @@ transformation in the augmentation process. In contrast to the 15% interpolation
 used in the original data, the interpolation threshold is kept as low as 10% to preserve
 more real data points of the augmented sample.
 
-### Jittering
+#### Jittering
 Noise is generated from a normal distribution with a mean of 0 and chosen standard deviation values of 0.2 and 0.5 to examine the effect of low and high noise levels on the performance of the
 models. Choosing the right standard deviation ensures the jittered data reflects the original time series. A standard deviation that is too large may distort the data, while too small may not add enough diversity.
 
@@ -81,7 +79,7 @@ models. Choosing the right standard deviation ensures the jittered data reflects
 <img src="plots/jitter _hr_temp.png" alt="overview" width="600"/>
 </div>
 
-### Rotation
+#### Rotation
 Rotation is one of the augmentation techniques that can be applied only to acceleration
 data in this work due to the label-invariant characteristics of different wearable sensor
 placements among participants. For example, a reversed placement of the sensor can flip its readings while maintaining the same labels for the acceleration data. In this case, rotational
@@ -91,7 +89,7 @@ inverting their sign can result in changes to the label, generating unrealistic 
 <img src="plots/rotation.png" alt="overview" width="600"/>
 </div>
 
-### Permutation
+#### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
 time series by dividing it into a specified number of segments and rearranging the order of
 the segments randomly. The number of segments N and the minimum segment length are both defined hyperparameters.
@@ -102,7 +100,7 @@ length is fixed at 10.
 <img src="plots/permutation.png" alt="overview" width="600"/>
 </div>
 
-### Time Warping
+#### Time Warping
 The time warping is applied to the original time series sample by smoothly distorting the
 time steps. First, the smooth cubic spline is generated using the knots with a mean of 0 and
 a standard deviation of 0.2. The cumulative graph is formed using the cumulative sum
@@ -114,7 +112,7 @@ acceleration data to generate the time-warped version of the data.
 <img src="plots/time_warp.png" alt="overview" width="600"/>
 </div>
 
-### Magnitude Warping 
+#### Magnitude Warping 
 Magnitude warping involves modifying the magnitude or amplitude of the original signal
 by convolving it with smooth warping curves. These warping curves are generated using
 a cubic spline interpolation method and their shape is determined by a set of randomly
@@ -135,7 +133,7 @@ rate and temperature, Magnitude Warping is not applied to these features. (same 
 <img src="plots/mag_warp.png" alt="overview" width="600"/>
 </div>
 
-### Window Slicing
+#### Window Slicing
 Window slicing is an augmentation technique in time series analysis that selects a portion of the data as a representative window. In this approach, the data is cropped to 90% of its original length, with the starting point chosen randomly and 10% removed from either end. For direct comparison with other methods, the cropped series is interpolated back to its original length.
 
 <div align="center">
@@ -150,7 +148,7 @@ of 3D acceleration time series presented in a single plot.
 </div>
 
 
-### Combination of techniques 
+#### Combination of techniques 
 
 • Permutation + Time Warping
 
@@ -234,7 +232,6 @@ sensitivity and false alarm rate per 24 hours for various techniques in the thre
 <div align="center">
 <img src="plots/std_aug_3feat.png" alt="overview" width="600"/>
 </div>
-
 
 
 T, PT,
