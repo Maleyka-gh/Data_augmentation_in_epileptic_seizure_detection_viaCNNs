@@ -254,6 +254,55 @@ lower seizure sensitivity at low FA/24h (Jittering (J))
 or higher seizure sensitivity at high FA/24h (W and
 T).
 
+### Discussion
+
+All standard time series data augmentation techniques (except T) have a higher seizure sensitivity
+in the five-feature case as compared to when they
+are used in the three-feature case. However, considering the detection improvement from their baseline version, no technique in the five-feature case
+has produced more seizure sensitivity than its baseline (90%). In contrast, all the techniques (except
+J, M, and RPT) in the three-feature case have given
+higher seizure sensitivity than its baseline (80%). Using Time-Warping in a three-feature case, a seizure
+sensitivity of 95% is achieved, which is overall the
+highest among all the techniques in both three-feature
+and five-feature cases. 
+
+Using standard augmentation techniques, the average false alarm rate for the five-feature case is approximately 304 FA/24h. This is notably lower than the average false alarm rate of 377 FA/24h observed
+in the three-feature case. Since the lower false alarm
+means that more non-seizure windows are classified
+accurately, it is observed that, as a result, the average
+specificity with all techniques in the five-feature case
+is 87%, which is higher than the average specificity of
+80% observed in three-feature scenarios. The window
+sensitivity for all the techniques in the five-feature
+case, averaging 68.6%, is also higher than those of
+the three-feature case, which has an average window
+sensitivity of 57.3%.
+Training with augmented data increases the quantity of seizure data in the training set. As classes are
+balanced before training, this also leads to a corresponding increase in the number of non-seizure samples in the training set. The false alarm rate is reduced with most augmentation techniques because
+the model has been exposed to more non-seizure samples during training, enabling it to more accurately
+predict non-seizure samples in the test set. Considering this, if more original seizure data is available, training the model with a combination of original and synthetic data would be more beneficial in
+lowering the false alarm rates without decreasing the
+sensitivity.
+
+### Summary 
+Most standard time series data augmentation techniques lowered the false alarm rate in both the three-
+and five-feature dataset cases. The seizure sensitivity remained constant in the five-feature case, while it
+showed improvement in the three-feature case when
+compared to the CNN result that did not use any augmented data.
+In the five-feature dataset, the most effective
+augmentation approach was achieved by utilizing a
+combination of Rotation and Permutation techniques
+(RP), whereas in the three-feature dataset, the best results were obtained by employing Rotation (R) and
+Magnitude Warping (M) techniques. In the five-feature case, the combination of Rotation and Permutation (RP) achieves the same seizure sensitivity as
+the baseline (90%) while reducing the false alarm rate
+by 123 FA/24h. In the three-feature case, Rotation
+(R) increases the seizure sensitivity by 5% (from 80%
+to 85%) while reducing the false alarm rate by 160
+FA/24h (from 453FA/24h to 293FA/24h). The aforementioned results were observed when the synthetic
+data obtained from the most effective techniques (4x:
+with an amount four times larger than the original
+data) was combined with the original dataset, which
+was used for CNN training.
 
 
 
