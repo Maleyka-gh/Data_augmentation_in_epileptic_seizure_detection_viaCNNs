@@ -93,6 +93,7 @@ inverting their sign can result in changes to the label, generating unrealistic 
 <div align="center">
 <img src="plots/rotation_xyz.png" alt="overview" width="600"/>
 </div>
+
 ### Permutation
 In the implementation of Permutation, the original seizure sample is rearranged into a new
 time series by dividing it into a specified number of segments and rearranging the order of
