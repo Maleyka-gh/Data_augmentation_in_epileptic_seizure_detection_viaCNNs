@@ -55,7 +55,7 @@ data augmentation techniques are shown in the Figure below.
 <img src="plots/aug.PNG" alt="overview" width="500"/>
 </div>
 
-For augmented sample plots via each technique is available under the [Notebook](aug_plots.ipynb). 
+Implementation of Standard Augmentation techniques and augmented sample plots via each technique is available under the [Notebook](aug_plots.ipynb).
 
 These methods are applied to the extracted seizure events and the augmentation
 process transforms the original seizure events to produce new synthetic samples. The original
@@ -66,6 +66,12 @@ missing values is only performed during windowing after the samples have undergo
 transformation in the augmentation process. In contrast to the 15% interpolation threshold
 used in the original data, the interpolation threshold is kept as low as 10% to preserve
 more real data points of the augmented sample.
+
+### Jittering
+Noise is generated from a normal distribution with a mean of 0 and chosen standard deviation values of 0.2 and 0.5 to examine the effect of low and high noise levels on the performance of the
+models. Choosing the right standard deviation ensures the jittered data reflects the original time series. A standard deviation that is too large may distort the data, while too small may not add enough diversity.
+
+
 
 
 
